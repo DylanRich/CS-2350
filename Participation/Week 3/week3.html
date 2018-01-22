@@ -1,0 +1,136 @@
+<!DOCTYPE html> 
+<html lang=”en”> 
+<head> 
+
+    <title>Images, Tables, and Forms</title> 
+
+</head> 
+<body> 
+    <h1>Images</h1>
+    <p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png" height="250px" width="450px">
+    </p>
+    <p>
+        <img src="pokemon.png" height="50%" width="50%">
+    </p>
+    <hr/>
+    <h1>Tables</h1>
+    <table border="1">
+        <caption>Transistors then and now</caption>
+        <tr>
+            <th>Attribute</th>
+            <th>1975></th>
+            <th>2018></th>
+        </tr>
+        <tr>
+            <th>Transistor Size</th>
+            <td>6 &mu;m</td>
+            <td>14 &mu;m</td>
+        </tr>
+        <tr>
+            <th>Transistor Count</th>
+            <td>6k</td>
+            <td>1.3G</td>
+        </tr>
+    </table>
+    <br><br>
+    <table border="1">
+        <caption>Team Schedule</caption>
+        <tr>
+            <th></th>
+            <th>Monday</th>
+            <th>Wednesday</th>
+            <th>Friday</th>
+        </tr>
+        <tr>
+            <th>9:00</th>
+            <td colspan="3">Warmup</td>
+        </tr>
+        <tr>
+            <th>10:00</th>
+            <td>Drills</td>
+            <td>Skills Test</td>
+            <td rowspan="2">Scrimmage</td>
+        </tr>
+        <tr>
+            <th>11:00</th>
+            <td>Film</td>
+            <td>Weights</td>
+        </tr>
+    </table>
+    <br><br>
+    <table border="1">
+        <caption>First Gen Pokemon Chart</caption>
+        <thead>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Evolves Into</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="https://vignette.wikia.nocookie.net/pokemon/images/2/21/001Bulbasaur.png/revision/latest?cb=20140328190757" height="50%" width="50%"></td>
+                <td>Bulbasaur</td>
+                <td>Grass/Poison</td>
+                <td><a href="http://pokemon.wikia.com/wiki/Ivysaur">Ivysaur</a></td>
+            <tr/>
+            <tr>
+                <td><img src="https://vignette.wikia.nocookie.net/pokemon/images/7/73/004Charmander.png/revision/latest?cb=20140724195345" height="50%" width="50%"></td>
+                <td>Charmander</td>
+                <td>Fire</td>
+                <td><a href="http://pokemon.wikia.com/wiki/Charmeleon">Charmeleon</a></td>
+            <tr/>
+            <tr>
+                <td><img src="https://vignette.wikia.nocookie.net/pokemon/images/3/39/007Squirtle.png/revision/latest?cb=20140328191525" height="50%" width="50%"></td>
+                <td>Squirtle</td>
+                <td>Water</td>
+                <td><a href="http://pokemon.wikia.com/wiki/Wartortle" alt="This is Squirtle">Wartortle</a></td>
+            <tr/>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Pokemon is awesome</td>
+            </tr>
+        </tfoot>
+    </table>
+    <h1>Forms</h1>
+    <form action="http://google.com" method="">
+    <fieldset>
+        <legend>Registration</legend>
+        <p>
+            <label>Enter Some Text</label>
+            <input type="text" required>
+        </p>
+        <p>
+            <label>Enter Password</label>
+            <input type="password" required>
+        </p>
+        <p>
+            <label>Check One</label>
+            <input type="checkbox">
+            <input type="checkbox" checked>
+            <input type="checkbox">
+        </p>
+        <p>
+            <label>Radio Buttons</label>
+            <input type="radio" name="radio-choice">
+            <input type="radio" name="radio-choice">
+        </p>
+        <p>
+            <textarea rows="5" cols="20"></textarea>
+        </p>
+        <p>
+            <select>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option value="third option">Option 3</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit">
+            <input type="reset">
+        </p>
+    </fieldset>
+    </form>
+</body>
+</html>
