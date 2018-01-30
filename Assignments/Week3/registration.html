@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html lang=”en”> 
+<head> 
+  <!--Honor Code: I acknowledge that this code represents my own work: DR Date: 1/29/2018--> 
+  <meta charset="utf-8" /> 
+  <meta name="description" content="Assignment 3 registration" /> 
+  <meta name="keywords" content="COMMA SEPARATED SEARCH KEYWORDS FOR ASSIGNMENT GOES HERE" /> 
+  <meta name="author" content="Dylan Rich" /> 
+
+  <title>Registration Form</title> 
+
+</head> 
+<body> 
+    <nav>
+        <a href="movies.html">Favorite Movies</a>
+        <a href="registration.html">Registration Form</a>
+        <a href="schedule.html">Schedule</a>
+    </nav>
+
+    <form>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <p>
+                <label>First Name</label>
+                <input type="text" placeholder="First Name Only" required autofocus>
+                <br/>
+                <label>Last Name</label>
+                <input type="text" placeholder="Last Name Only" required>
+                <br/>
+                <label>Date of Birth</label>
+                <input type="date">
+                <br/>
+                <label>Email</label>
+                <input type="email" placeholder="example@domain.com">
+                <br/>
+                <label>URL</label>
+                <input type="url" placeholder="http://mysite.com">
+                <br/>
+                <label>Telephone</label>
+                <input type="tel" placeholder="Eg. 801-555-1234">
+                <br/>
+                <label>Shoesize</label>
+                <input type="number" min="5" max="18" step=".5" value="9">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Billing Address</legend>
+            <label>Address</label>
+            <textarea rows="5" cols="50"></textarea>
+            <br/>
+            <label>Country</label>
+            <select>
+                <option>USA</option>
+                <option>Canada</option>
+                <option>Mexico</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Card Details</legend>
+            <fieldset>
+                <legend>Card Type</legend>
+                <input type="radio" name="card">VISA
+                <input type="radio" name="card">Mastercard
+                <input type="radio" name="card">AMEX
+            </fieldset>
+            <label>Name</label>
+            <input type="text" placeholder="Name as it appears on card">
+            <br/>
+            <label>Card Number</label>
+            <input type="text">
+            <br/>
+            <label>Security Code</label>
+            <input type="password">
+            <br/>
+            <label>Expiry Date</label>
+            <input type="date">
+        </fieldset>
+        <fieldset>
+            <input type="submit" value="Submit Registration">
+            <input type="reset" value="Clear Registration">
+        </fieldset>
+    </form>
+
+</body>
+</html>
