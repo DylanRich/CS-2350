@@ -1,0 +1,66 @@
+body {
+    font-family: Arial;
+    color: #000000;
+    background-color: #9bc1ff;
+}
+
+blockquote {
+    padding: 20px;
+    margin: 10px;
+}
+
+p {
+    font-size: small;
+    text-indent: 50px;
+    padding-top: 20px;
+}
+
+h1 {
+    padding-bottom: 0px;
+    padding-top: 5px;
+    font-family: "times new roman", arial;
+}
+
+ul {
+    list-style-image: url('images/check.png');
+}
+
+input[type=text], input[type=email], input[type=tel], textarea {
+    background-color: gray;
+}
+
+table {
+    border: 1px solid white;
+    background-image: url('images/background.jpg');
+}
+
+td {
+    border: 1px solid white;
+    color: white;
+}
+
+th {
+    border: 2px solid red;
+    color: white;
+}
+
+/* This class contains formatting for the four divs that contain the page's content */
+.divClass {
+    border: 1px solid black;
+    margin: 10px;
+}
+
+#chineseIntroduction {
+    color: red;
+}
+
+/* This class contains formatting for buttons on the contact form */
+.formClass {
+    font-family: impact;
+    color: white;
+    background-color: black;
+}
+
+a:hover {
+    color: white;
+}
