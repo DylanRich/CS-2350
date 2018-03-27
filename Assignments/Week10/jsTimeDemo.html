@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html lang=”en”> 
+<head> 
+  <!--Honor Code: I acknowledge that this code represents my own work: DR Date: 3/19/2018--> 
+  <meta charset="utf-8" /> 
+  <meta name="author" content="Dylan Rich" /> 
+
+  <script>
+      function displayDate()
+      {
+          var date =  new Date();
+          var day = date.getDay();
+          var year = date.getFullYear();
+          var hour = date.getHours();
+          var minute = date.getMinutes();
+          var month = date.getMonth();
+          var dayOf = date.getDate();
+          var greeting = "";
+
+          if(hour >= 0 && hour <= 12)
+          {
+            greeting = "Good morning, it is ";
+          }
+          else if(hour > 12 && hour < 18)
+          {
+            greeting = "Good afternoon, it is ";
+          }
+          else
+          {
+              greeting = "Good evening, it is ";
+          }
+
+          if(day == 0)
+          {
+              day = "Sunday";
+          }
+          else if(day == 1)
+          {
+              day = "Monday";
+          }
+          else if(day == 2)
+          {
+              day = "Tuesday";
+          }
+          else if(day == 3)
+          {
+              day = "Wednesday";
+          }
+          else if(day == 4)
+          {
+              day = "Thursday";
+          }
+          else if(day == 5)
+          {
+              day = "Friday";
+          }
+          else if(day == 6)
+          {
+              day = "Saturday";
+          }
+
+          if(month == 0)
+          {
+              month = "January";
+          }
+          else if(month == 1)
+          {
+              month = "February";
+          }
+          else if(month == 2)
+          {
+              month = "March";
+          }
+          else if(month == 3)
+          {
+              month = "April";
+          }
+          else if(month == 4)
+          {
+              month = "May";
+          }
+          else if(month == 5)
+          {
+              month = "June";
+          }
+          else if(month == 6)
+          {
+              month = "July";
+          }
+          else if(month == 7)
+          {
+              month = "August";
+          }
+          else if(month == 8)
+          {
+              month = "September";
+          }
+          else if(month == 9)
+          {
+              month = "October";
+          }
+          else if(month == 10)
+          {
+              month = "November";
+          }
+          else if(month == 11)
+          {
+              month = "December";
+          }
+
+          var display = greeting + hour + ":" + minute + " on " + day + ", " + month + " " + dayOf + ", " + year + ".";
+          document.getElementById("date").innerHTML = display;
+      }
+  </script>
+</head> 
+<body>
+    <input type = “button” value = "Click here to display date" OnClick ="displayDate()">
+    <p id="date">
+
+    </p>
+    <a href="jsLoopDemo.html">Part 2</a>
+</body>
+</html>
