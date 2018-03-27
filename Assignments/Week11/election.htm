@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+
+   A7: Congressional Race Results
+   Author: Dylan Rich
+   Plagarism Acknowledgment:  DR 3/26/1018
+
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Congressional Races</title>
+<link href="results.css" rel="stylesheet" type="text/css" />
+<script src="votes.js"></script>
+<script>
+    function totalVotes(votes)   //Calculates the sum of all values in a vote array
+    {
+        var total = 0;
+        for(i=0; i<votes.length; i++)   //for every element in the vote array
+        {
+            total += votes[i];  //add to total
+        }
+        return total;   //return total number of votes
+    }
+
+    function calcPercent(item, sum)  //Calculates a percentage rounded to the nearest integer
+    {
+        return Math.round((item/sum)*100);
+    }
+
+    function createBar(partyType, percent)   //Writes blank bars to make up table cells in the election results
+    {
+        //depending on the partytype, add appropriate cell
+        switch(partyType)   
+        {
+            case "D":
+                var barText = "<td class='dem'> </td>";
+                break;
+            case "R":
+                var barText = "<td class='rep'> </td>";
+                break;
+            case "I":
+                var barText = "<td class='ind'> </td>";
+                break;
+            case "G":
+                var barText = "<td class='green'> </td>";
+                break;
+            case "L":
+                var barText = "<td class='lib'> </td>";
+                break;
+        }
+        for (i=1; i<=percent; i++)  //Write the empty cells to the table
+        {
+            document.write(barText);
+        }
+    }
+
+    function showResults(race, name, party, votes)   //Shows the results of a race
+    {
+        var totalV = totalVotes(votes); //Gets total amount of votes
+        document.write("<h2>" + race + "</h2><table><tr><th>Candidate</th><th class='num'>Votes</th><th class='num'>%</th></tr>");  //Write table header
+        //For each entry, we have a different row
+        var length = name.length;
+        for(j=0; j<name.length; j++)
+        {
+            document.write("<tr><td>"+ name[j] + "(" + party[j] + ")</td><td class='num'>" + votes[j] + "</td>");   //Write first cells
+            var percent = calcPercent(votes[j], totalV); //call calcpercent to calculate vote percentage
+            document.write("<td class='num'" + "(" + percent + "(%" + "</td>"); //Write the percent
+            createBar(party[j], percent);   //call createBar to write the cells
+            document.write("</tr>");    //write the closing row tag
+        }
+        document.write("</table>"); //Write the closing table tag
+    }
+</script>
+  
+</head>
+
+<body>
+
+   <div id="intro">
+      <p><img src="logo.jpg" alt="Election Day Results" /></p>
+      <a href="#">Election Home Page</a>
+      <a href="#">President</a>
+      <a href="#">Senate Races</a>
+      <a href="#">Congressional Races</a>
+      <a href="#">State Senate</a>
+      <a href="#">State House</a>
+      <a href="#">Local Races</a>
+      <a href="#">Judicial</a>
+      <a href="#">Referendums</a>
+   </div>
+
+   <div id="results">
+       <h1>Congressional Races</h1>
+       <script>
+           showResults(race[0], name1, party1, votes1);
+           showResults(race[1], name2, party2, votes2);
+           showResults(race[2], name3, party3, votes3);
+           showResults(race[3], name4, party4, votes4);
+           showResults(race[4], name5, party5, votes5);
+       </script>
+   </div>
+
+</body>
+</html>
