@@ -41,10 +41,10 @@ function initPage()
       }
       for(j=0 ; j<dataFields.length; j++)
       {
-            dataFields[j].addEventListener("blur", update());
+            dataFields[j].addEventListener("blur", update);
       }
-      var webForm = document.getElementById("expform");
-      webForm.addEventListener("submit", validateForm());
+      var webForm = document.forms[0];
+      webForm.addEventListener("submit", validateForm);
 }
 
 function testLength(field)
@@ -116,9 +116,10 @@ function calcTotal()
 function update()
 {
       var numRegExp = new RegExp("/^\d*(\.\d{0,2})?$/");
-      if(numRegExp.test(this.value))
+      var number = parseFloat(this.value);
+      if(numRegExp.test(number.toFixed(2)))
       {
-            this.value = this.value.toFixed(2);
+            this.value = number.toFixed(2);
             for(i=1 ; i<5; i++)
             {
                   document.forms[0].elements["sub"+i].value = calcRow(i).toFixed(2);
