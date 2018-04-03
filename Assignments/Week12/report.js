@@ -39,12 +39,12 @@ function initPage()
       {
             dataFields.push(list[i]);
       }
-      for(j=0 ; j<dataFields.length; i++)
+      for(j=0 ; j<dataFields.length; j++)
       {
-            dataFields[i].addEventListener("blur", update);
+            dataFields[j].addEventListener("blur", update());
       }
       var webForm = document.getElementById("expform");
-      webForm.addEventListener("submit", validateForm);
+      webForm.addEventListener("submit", validateForm());
 }
 
 function testLength(field)
@@ -63,7 +63,7 @@ function testLength(field)
 
 function testPattern(field, regx)
 {
-      if(!(regx.test(field.getAttribute("value").value)))
+      if(!(regx.test(field.value)))
       {
             field.setAttribute("background-color", "yellow");
             field.setAttribute("color", "red");
@@ -84,10 +84,10 @@ function validateForm()
       isValid = testLength(document.forms[0].fname);
       isValid = testLength(document.forms[0].address);
       isValid = testLength(document.forms[0].summary);
-      isValid = testPattern(document.forms[0].account, "/ACT\d\d\d\d\d\d/");
-      isValid = testPattern(document.forms[0].department, "/DEPT\d\d\d/");
-      isValid = testPattern(document.forms[0].project, "/PROJ\d\d\d\d\d/");
-      isValid = (testPattern(document.forms[0].ssn, "\d\d\d\d\d\d\d\d\d") || testPattern(document.forms[0].ssn, "\d\d\d\-\d\d\-\d\d\d\d"));
+      isValid = testPattern(document.forms[0].account, new RegExp("/ACT\d\d\d\d\d\d/"));
+      isValid = testPattern(document.forms[0].department, new RegExp("/DEPT\d\d\d/"));
+      isValid = testPattern(document.forms[0].project, new RegExp("/PROJ\d\d\d\d\d/"));
+      isValid = (testPattern(document.forms[0].ssn, new RegExp("\d\d\d\d\d\d\d\d\d")) || testPattern(document.forms[0].ssn, new RegExp("\d\d\d\-\d\d\-\d\d\d\d")));
       if(!isValid)
       {
             alert("Please fill out all required fields in the proper format");
@@ -115,7 +115,7 @@ function calcTotal()
 
 function update()
 {
-      var numRegExp = "/^\d*(\.\d{0,2})?$/";
+      var numRegExp = new RegExp("/^\d*(\.\d{0,2})?$/");
       if(numRegExp.test(this.value))
       {
             this.value = this.value.toFixed(2);
