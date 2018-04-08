@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html lang=”en”> 
+<head> 
+  <!--Honor Code: I acknowledge that this code represents my own work: DR Date: 2/5/2018--> 
+  <meta charset="utf-8" />
+  <meta name="author" content="Dylan Rich" /> 
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" media="print" href="styles/print.css">
+  <link rel="stylesheet" href="scripts/jquery-ui.min.css">
+  <script src="scripts/external/jquery/jquery.js"></script>
+  <script src="scripts/jquery-ui.min.js"></script>
+
+  <title>Contact Me</title> 
+
+</head> 
+<body> 
+<div id="container">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="career.html">Career</a>
+        <a href="personal.html">Hobbies and Other</a>
+        <a href="contact.html">Contact Me</a>
+    </nav>
+
+    <h1>Contact Me</h1>
+    <form>
+        <fieldset>
+            <p>
+                <label>Name</label>
+                <br/>
+                <input type="text" placeholder="Enter Name" required autofocus>
+                <br/>
+                <br/>
+
+                <label>Email</label>
+                <br/>
+                <input type="email" placeholder="email@example.com" required>
+                <br/>
+                <br/>
+
+                <label>Phone</label>
+                <br/>
+                <input type="tel" placeholder="555-555-5555">
+                <br/>
+                <br/>
+
+                <label>Comments</label>
+                <br/>
+                <textarea rows="5" cols="50" required></textarea>
+                <br/>
+
+                <label>I desire a response</label>
+                <input type="checkbox">
+                <br/>
+                <br/>
+
+                <label>Date</label>
+                <input type="text" id="datepicker">
+                <br/>
+                <br/>
+
+                <input type="submit" id="button">
+                <input type="reset" id="button">
+            </p>
+        </fieldset>
+    </form>
+
+    <footer>
+        <hr>
+        <p>
+            &copy; Dylan Rich 2018
+        </p>
+    </footer>
+</div>
+
+<script>
+    $( "#datepicker" ).datepicker();
+    $( "button" ).button();
+</script>
+
+</body>
+</html>

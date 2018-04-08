@@ -1,0 +1,56 @@
+body { 
+    margin: 20;
+    font: normal 12px/18px Arial, sans-serif;
+    background: lightblue;
+}
+
+#container {
+    width: 900px;
+    margin: 0 auto;
+    background: lightgray;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+#draggable {
+    border: 1px solid black;
+    padding: 10px;
+    width: 75%;
+    background-color: white;
+}
+
+img {
+    float: right;
+    padding-left: 20px;
+}
+
+h1, h2 {
+    color: darkblue;
+}
+
+footer {
+    width: 860px;
+    padding: 30px 20px 20px 20px;
+}
+
+nav {
+    height: 80px;
+    background-color: lightgray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+nav a {
+    display: block;
+    float: left;
+    color: blue;
+    text-decoration: none;
+    font-weight: 900;
+    padding: 0px 20px 0px 20px;
+    line-height: 50px;
+    border-right: 1px solid gray;
+}
+
+nav a:hover {
+    background-color: lightblue;
+}
